@@ -26,4 +26,6 @@ Route::get('/posts/{id}', function ($id) {
     return response('post' . $id);
 })->where('id', '[0-9]+');
 
-
+Route::get('/search', function (Request $request) {
+    return $request->name;
+});
